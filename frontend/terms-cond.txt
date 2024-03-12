@@ -1,0 +1,55 @@
+TradeCrafts: Project Requirements Document
+use the below information to write a terms and condition file for me for my applcation. there is also a 5% charge per each product purchased and a 6% charge per each skill booked
+
+
+Introductions: TradeCrafts
+
+	TradeCrafts is a web application that provides exposure to young entrepreneurs in Kaduna State, Nigeria and enables them to upload their hand-made item online and meet their target customers.
+
+	TradeCrafts allows clients to find entrepreneurs and their different skills and specialization and also allows them to book a learning session of any skill they want to learn on the platform.
+
+	On TradeCrafts, entrepreneurs have access to real-world mentors to coach them on how to better utilize their hand-skills to excel in their business.
+
+
+
+Entities/Users
+
+Entrepreneurs: The entrepreneurs can upload their hand-made item on the platform and for customers to see. Entrepreneurs who are available for coaching apprentices can also post their availability for potential apprentices opportunities.
+
+Mentors: The mentors are responsible for coaching the young entrepreneurs who want advice on how to better manage their hand-skill and improve themselves.
+
+Learners: The learners on the platform can see available entrepreneurs who are available for coaching apprentices and schedule a session with them.
+
+Administrators: The administrators are responsible for overseeing and managing users on the platform. They can add admins, view all entrepreneurs and learners, and also see all the scheduled learning lessons.
+
+
+
+Additional Pages 
+
+Mission/Vision
+
+About us
+
+The team
+
+Reviews
+
+Contact page
+
+Frequently Asked Questions (FAQs)
+
+
+
+Additional Functionalities
+
+Entrepreneurs dashboard to display their apprentices and lesson sessions to help monitor their business growth.
+
+Learners can save any skill they want to learn for the future.
+
+ 
+
+
+
+Conclusion
+
+	In conclusion, this application will help connect individuals looking to learn a hand-skill with their potential tutor who are experienced in the skill. And also provides these entrepreneurs with well experienced mentors to administer to them business advice to bolster their growth in their line of business.

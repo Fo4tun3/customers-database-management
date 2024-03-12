@@ -1,0 +1,26 @@
+TradeCrafts stands as a revolutionary web application, a beacon for budding entrepreneurs in Kaduna State, Nigeria. 
+Dedicated to fostering creativity, TradeCrafts serves as an online platform where young artisans can showcase their handmade creations, 
+connecting directly with their target audience. This innovative space not only facilitates the display of handcrafted items but also opens 
+doors for learning opportunities. Clients can explore the diverse skills of entrepreneurs, booking learning sessions to acquire firsthand knowledge 
+from skilled mentors. With a unique emphasis on mentorship, TradeCrafts provides a gateway for entrepreneurs to receive guidance from experienced mentors, 
+paving the way for success in their ventures.
+
+At the heart of TradeCrafts are distinct user entities, each contributing to the platform's dynamic ecosystem. 
+Entrepreneurs wield the power to exhibit their creations and offer mentorship opportunities. Mentors play a crucial role by imparting valuable 
+insights to young entrepreneurs, guiding them on effective business management. Learners leverage the platform to discover skilled mentors and 
+schedule sessions to enhance their hand-skills. Administrators oversee the platform's functionality, managing users, and ensuring a seamless 
+experience for all. With additional features like personalized dashboards for entrepreneurs and the ability for learners to bookmark skills for 
+future learning, TradeCrafts emerges as a comprehensive solution for skill development and business growth.
+
+In conclusion, TradeCrafts is more than an application; it is a bridge connecting those eager to learn hand-skills with seasoned tutors. 
+The platform's commitment to mentorship and fostering growth positions it as a catalyst for the success of emerging entrepreneurs. 
+As TradeCrafts continues to empower the creative community in Kaduna State, its impact reverberates through the mission of skill acquisition, 
+mentorship, and collaborative learning.
+
+
+
+
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis ea pariatur neque nostrum natus libero consequatur suscipit, harum repudiandae quos perspiciatis accusantium atque odio, omnis quis, nulla voluptates dolore id.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, quam cum dicta nam aperiam molestiae porro sunt. <br><br> Exercitationem sapiente minus et quis perspiciatis consequuntur! Eum cupiditate tenetur laborum nesciunt ad.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni rerum quasi veritatis temporibus nam voluptatem magnam atque, corporis perspiciatis nesciunt libero natus earum non consequuntur. Nobis modi quos voluptate ex?

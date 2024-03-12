@@ -1,0 +1,510 @@
+@font-face {
+    font-family: "agbalumo";
+    src: url(../font/Agbalumo/Agbalumo-Regular.ttf);
+}
+@font-face {
+    font-family: "EduTas";
+    src: url(../font/Edu_TAS_Beginner/Edu_TAS_Beginner/static/EduTASBeginner-Medium.ttf);
+}
+@font-face {
+    font-family: "Neue Montreal";
+    src: url(../font/Neue-montreal/NeueMontreal-Regular.otf);
+}
+@font-face {
+    font-family: "Neue MontrealBold";
+    src: url(../font/Neue-montreal/NeueMontreal-Bold.otf);
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+    /* font-family: EduTas; */
+}
+.navbar {
+    font-family: agbalumo;
+
+    position: fixed;
+    /* position: relative; */
+    /* #850F87; #0F5D85 */
+    background-color: #fff;
+    border: none;
+    width: 100%;
+    height: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-bottom: 1px solid #19205e; */
+    margin-top: -4.8rem;
+    z-index: 10;
+}
+.nav_link {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.nav_logo {
+    cursor: pointer;
+    /* border: 1px solid blue; */
+    /* font-family: EduTas; */
+    padding: 20px 20px 20px 120px;
+    font-size: 25px;
+}
+.nav_logo > h4{
+    color: #19205e;
+}
+.nav_links {
+    padding: 22px 0px 20px 20px;
+    margin-left: 140px;
+    /* border: 1px solid green; */
+    /* z-index: 1; */
+}
+.nav_links_list {
+    display: flex;
+    align-items: center;
+}
+.nav_links_list > li {
+    cursor: pointer;
+    list-style: none;
+    color: #eee4e4;
+    color: #000;
+    padding-right: 30px;
+}
+.nav_links_list > li:hover {
+    color: #19205e;
+}
+.cart_number {
+    position: absolute;
+    text-align: center;
+    font-size: 12px;
+    padding: 1px;
+    padding-top: 0px;
+    width: 10px;
+    height: 12px;
+    color: #fff;
+    border-radius: 10px;
+    border: 2px solid #19205e;
+    margin-top: -37px;
+    margin-left: 37px;
+}
+.cart_img >a img {
+    cursor: pointer;
+    height: 30px;
+}
+.search_login_reg_btn {
+    /* border: 1px solid blue; */
+    display: flex;
+    margin-right: 120px;
+    height: 30px;
+    padding: 23px 20px 23px 20px;
+    align-items: center;
+    z-index: -1;
+}
+.nav_login_btn  {
+    font-family: agbalumo;
+    cursor: pointer;
+    border: none;
+    margin-right: 5px;
+    width: 80px;
+    height: 35px;
+    background-color: #c0c1cf;
+    color: #000;
+    border-radius: 18px;
+}
+.nav_login_btn:hover {
+    border: 1px solid #fff;
+    background-color: #19205e;
+    color: #fff;
+    transition: 1.5s ease-in-out;
+    transition: 1.5s ease;
+}
+.nav_register_btn {
+    font-family: agbalumo;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #19205e;
+    border-radius: 20px;
+}
+.nav_register_btn:hover {
+    border: 1px solid #fff;
+    background-color: #19205e;
+    color: #fff;
+    transition: 1.5s ease-in-out;
+    transition: 1.5s ease;
+}
+/* Dropdown styles */
+#dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 0px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #859098;
+    min-width: 160px;
+    z-index: 1;
+    text-align: left;
+    border-radius: 5px;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #0F5D85;
+}
+
+
+/* body {
+    background: linear-gradient(#859098, #c0c1cf);
+} */
+img {
+    height: 30px;
+}
+.login_section {
+    margin-top: 4.8rem;
+    height: 83.1vh;
+    padding: 30px 140px 10px 120px;
+    background: url(../images/images/background1.jpg);
+}
+.login_container {
+    /* border: 1px solid red; */
+    display: grid;
+    /* grid-template-columns: 650px 443px;
+    grid-template-columns: repeat(1,1fr); */
+    border-radius: 50px;
+    justify-content: center;
+}
+
+.user_input_field {
+    /* border: 1px solid lawngreen; */
+    width: 380px;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 50px;
+   justify-content: center;
+}
+#login-form > h3 {
+    padding: 30px 0px;
+    font-size: 38px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #19205e;
+}
+.top_container {
+    /* border: 1px solid pink; */
+    /* padding: 23px; */
+    margin-top: -50px;
+    margin-left: 90px;
+    width: 190px;
+    border-radius: 5px;
+    border: none;
+    background-color: #19205e;
+    /* height: ; */
+}
+.top_container > h4 {
+    color: #f4f4f4;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.login_fields {
+    /* border: 1px solid yellow; */
+    margin-top: -10px;
+    margin-left: 0px;
+    /* padding: 0px 50px 0px 50px; */
+    width: 370px;
+}
+.input_fields {
+    align-items: center;
+    background-color: #2c2b2b;
+    display: flex;
+    border-radius: 20px;
+    margin: 20px;
+}
+.container > img {
+    /* border: 2px solid red; */
+    height: 20px;
+    /* width: 20px; */
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.input_fields > input::placeholder {
+    color: #dad7d7;
+}
+.input_fields > input {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    outline: none;
+    padding: 10px 16px 10px 10px;
+    margin: 0px 0px 0px 5px;
+    border: none;
+    width: 275px;
+    background-color: #2c2b2b;
+    border-radius: 20px;
+}
+.forget_password {
+    display: flex;
+    padding: 0px 25px;
+}
+.remember {
+    color: #19205e;
+    margin-left: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.forget_pass {
+    cursor: pointer;
+    color: #19205e;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 90px;
+}
+.submit_btn {
+    padding: 20px 50px;
+}
+.submit_btn > input {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid red;
+    font-weight: 500;
+    color: #fff;
+    outline: none;
+    padding: 10px;
+    margin: 20px 30px 20px 20px;
+    border: none;
+    width: 240px;
+    background-color: #19205e;
+    border-radius: 20px;
+}
+.submit_btn > input:hover {
+    background-color: #03072b;
+    transition: 1.2s ease-in-out;
+}
+.create_account {
+    text-align: center;
+}
+.create_account >p a {
+    border: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #19205e;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 2px solid #19205e;
+    padding-bottom: 10px;
+    width: 150px;
+}
+.create_account >p a:hover {
+    font-size: 16px;
+    font-weight: bold;
+    color: #03072b;
+    border-bottom: 2px solid #03072b;
+}
+.pageerror {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    background-color: #be1717;
+    /* border: 2px solid #be1717; */
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    padding: 0px 50px;
+    /* display: none; */
+}
+.pagevalid {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+    background-color: green;
+    border: 2px solid green;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    padding: 2px 50px 0px 50px;
+    /* display: none; */
+}
+
+/*-------------------------------------
+        Footer
+--------------------------------------*/
+
+
+
+
+
+@media only screen and (min-width: 300px) and (max-width: 720px)  {
+    .wholepage {
+        /* border: 1px solid red; */
+        overflow-x: hidden;
+    }
+    
+    .navbar {
+        position: fixed;
+        /* position: relative; */
+        /* #850F87; #0F5D85 */
+        background-color: #fff;
+        border: none;
+        width: 100%;
+        height: 4.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* border-bottom: 1px solid #19205e; */
+        margin-top: -4.8rem;
+        z-index: 100;
+    }
+    .nav_logo {
+        cursor: pointer;
+        /* border: 1px solid blue; */
+        /* font-family: EduTas; */
+        text-align: center;
+        padding: 20px 20px 20px 40px;
+        font-size: 25px;
+    }
+    .nav_links {
+        padding: 22px 0px 20px 20px;
+        margin-left: 140px;
+        /* border: 1px solid green; */
+        /* z-index: 1; */
+        display: none;
+    }
+    .search_login_reg_btn {
+        /* border: 1px solid blue; */
+        display: none;
+    }
+    body {
+        background: linear-gradient(#fff, #fff);
+    }
+
+    .login_section {
+        /* border: 1px solid blue; */
+        width: 100%;
+        margin-top: 4.8rem;
+        padding: 20px 10px;
+        background: linear-gradient(#fff, #fff);
+        justify-content: center;
+    }
+    .img_display {
+        /* border: 1px solid blue; */
+        display: none;
+    }
+    .user_input_field {
+        /* border: 1px solid lawngreen; */
+        padding: 0px;
+        background-color: #fff;
+        border-radius: 0px;
+        width: 91%;
+    }
+    #login-form > h3 {
+        padding: 0% 0% 5% 0%;
+        text-align: center;
+        font-size: 35px;
+    }
+    .top_container {
+        /* border: 1px solid pink; */
+        /* padding: 23px; */
+        margin-top: -50px;
+        margin-left: -72px;
+        width: 190px;
+        border-radius: 23px;
+        border: none;
+        background-color: #19205e;
+        display: none;
+    }
+    .login_fields {
+        /* border: 1px solid yellow; */
+        margin-top: 0px;
+        margin-left: 0px;
+        /* padding: 0px 50px 0px 50px; */
+        /* width: 370px; */
+        width: 100%;
+    }
+    .input_fields {
+        /* border: 1px solid yellow; */
+        align-items: center;
+        background-color: #2c2b2b;
+        display: flex;
+        border-radius: 20px;
+        margin: 20px;
+    }
+    .container > img {
+        /* border: 2px solid red; */
+        height: 20px;
+        /* width: 20px; */
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .input_fields > input::placeholder {
+        color: #dad7d7;
+    }
+    
+    .forget_password {
+        display: flex;
+        padding: 0px 25px;
+    }
+    .forget_pass {
+        cursor: pointer;
+        /* border: 2px solid red; */
+        color: #19205e;
+        font-weight: 500;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-left: 60px;
+    }
+    .submit_btn {
+        /* border: 2px solid red; */
+        padding: 20px 50px;
+    }
+    .submit_btn > input {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 500;
+        color: #fff;
+        outline: none;
+        padding: 10px;
+        margin: 20px 0px 20px 0px;
+        border: none;
+        /* border: 1px solid red; */
+        width: 240px;
+        background-color: #19205e;
+        border-radius: 20px;
+    }
+    .submit_btn > input:hover {
+        background-color: #03072b;
+        transition: 1.2s ease-in-out;
+    }
+    .create_account {
+        text-align: center;
+    }
+    .create_account >p a {
+        border: none;
+        text-decoration: none;
+        border-bottom: 2px solid #19205e;
+    }
+    .pageerror {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        background-color: #be1717;
+        /* border: 2px solid #be1717; */
+        text-align: center;
+        margin-top: -20px;
+        margin-bottom: 30px;
+        padding: 0px 50px;
+        /* display: none; */
+    }
+    .pagevalid {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #fff;
+        background-color: green;
+        border: 2px solid green;
+        text-align: center;
+        margin-top: -10px;
+        margin-bottom: 30px;
+        padding: 5px 50px;
+        /* display: none; */
+    }
+}

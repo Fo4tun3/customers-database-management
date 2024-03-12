@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeCrafts About Page</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/favilogo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/about.css">
+    <!--font-awesome.min.css Library-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+</head>
+<body class="main-layout" onload="displayCart();">
+    <!-- loader  -->
+    <!-- <div class="loader_bg">
+       <div class="loader"><img src="assets/images/loading.gif" alt="#" /></div>
+    </div> -->
+    <!-- <div id="loadingPage">
+        <img src="assets/images/loading.gif" alt="">
+    </div> -->
+
+    <div class="wholepage" id="content">
+        <nav class="navbar">
+            <div class="nav_link">
+                <div onclick="window.location = 'index.html'" class="nav_logo">
+                    <h4 class="logo">TradeCrafts</h4>
+                </div>
+                <div class="nav_links">
+                    <ul class="nav_links_list">
+                        <!-- <li class="dropdown" class="nav_links_list_item" onclick="window.location = '#home'">HOME
+                            <div class="dropdown-content">
+                                <a href="htmls/buyerUser.html">Dashboard</a>
+                                <a href="html/product.html">Our Products</a>
+                            </div>
+                        </li> -->
+                        <li class="dropdown" class="nav_links_list_item" id="nav_links_list_item" onclick="gotoDaskboard()">DASHBOARD
+                            <!-- <div class="dropdown-content">
+                                <a href="htmls/buyerUser.html">Dashboard</a>
+                                <a href="html/product.html">Our Products</a>
+                            </div> -->
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" id="nav_links_list_item1" onclick="color(1); window.location = '#about'">ABOUT
+                            <div class="dropdown-content">
+                                <a href="#about">About Us</a>
+                                <a href="#faqs">FAQs</a>
+                                <a href="#team">Our Team</a>
+                            </div>
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" id="nav_links_list_item2" onclick="color(2); window.location = 'index.html#services'">SERVICES
+                            <div class="dropdown-content">
+                                <a href="skills-display.html">Skills</a>
+                                <a href="products.html">Products</a>
+                            </div>
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" id="nav_links_list_item3" onclick="color(3); window.location = 'index.html#traction'">OUR MISSION
+                            <div class="dropdown-content">
+                                <a href="index.html#reviews">Reviews</a>
+                            </div>
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" id="nav_links_list_item4" onclick="color(4); window.location = 'index.html#contact'">CONTACT
+                            <div class="dropdown-content">
+                                <a href="index.html#contact">Contact us</a>
+                                <a href="index.html#newsletter">Newsletter</a>
+                            </div>
+                        </li>
+                        <!-- <li class="dropdown" class="nav_links_list_item" onclick="window.location = '#faqs'">FAQs
+                            <div class="dropdown-content">
+                                <a href="htmls/buyerUser.html">Dashboard</a>
+                                <a href="html/product.html">Our Products</a>
+                            </div>
+                        </li> -->
+                        <li href=" " class="cart_img" id="cart_img">
+                            <a onclick="gotoDaskboard()">
+                                <img src="assets/images/images/cart-blue.png" alt="cart basket">
+                            </a>
+                            <div class="cart_number">
+                                <p class="text" id="cart_number">0</p>
+                            </div>
+
+                             <!-- STAR OF CART DROPDOWN -->
+                             <div class="cart_basket hidden" onblur="" id="cart_basket">
+                                <div class="cart_title">
+                                    <h4 class="text" id="cart_number-title">Cart items (0)</h4>
+                                </div>
+                                <div class="cart_items" id="cart_items">
+                                    <h4 style="padding: 10px 0px; text-align: center;">Your cart basket is empty 😟😔🙁!</h4>
+                                </div>
+                                <div>
+                                    <div class="del">
+                                        <div class="redirect_btn">
+                                            <button class="text" onclick="gotoDaskboard();">See all Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END OF CART DROPDOWN -->
+                        </li>                    </ul>
+                </div>
+            </div>
+            <div class="nav_btns" id="nav_btns">
+                <div class="search_login_reg_btn">
+                    <div class="login_reg_btn">
+                        <input onclick="window.location = 'login.html'" class="nav_login_btn" type="submit" value="Log in">
+                        <input onclick="window.location = 'register.html'" class="nav_register_btn" type="submit" value="Get Started">
+                    </div>
+                </div>
+            </div>
+            <div class="hello_msg" id="hello_msg">
+                <div class="search_login_reg_btn">
+                    <div class="logged_msg">
+                      <div class="userMessage">
+                          <p>Hello <br> <span id="username">fortune</span></p>
+                      </div>
+                      <div>
+                          <input id="logout" class="nav_logout_btn" type="submit" onclick="logout();" value="Logout">
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- <div class="christmas_ornaments">
+            <div class="christmas_cap">
+                <img src="assets/images/christmas/cap0.png" alt="">
+            </div>
+            <div class="santa">
+                <img src="assets/images/christmas/santa3.png" alt="">
+            </div>
+        </div> -->
+            
+        <section class="traction_section" id="team">
+            <div class="traction_container">
+                <div class="team_row my-4">
+                    <div class="col-12">
+                        <h2 class="noo-sh-title text">Our Team</h2>
+                    </div>
+                    <div class="team_split">
+                        <div class="col-sm-6 col-lg-3">
+                            <div class="hover-team">
+                                <div class="our-team"> 
+                                    <img src="https://res.cloudinary.com/fortuneify/image/upload/v1703903865/tradecrafts/display-imgs/my_img_yeq3cf.jpg" alt="" />
+                                    <!-- <img src="/Frontend/assets/images/icon/avatar1.jpg" alt="" /> -->
+                                    <div class="team-content">
+                                        <h3 class="title text">Fortune Ifeanyi</h3> <span class="post text">Backend Developer</span> 
+                                    </div>
+                                    <ul class="social">
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/fortune-ifeanyi-231a64275/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B%2Bhclyv%2BSRsamgIbABedgKA%3D%3D"><img src="assets/images/images/linkedin.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://instagram.com/for_tune_ify"><img src="assets/images/images/instagram.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/for_tune_ify"><img src="assets/images/images/twitter1.png" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://web.facebook.com/profile.php?id=61551809647267"><img src="assets/images/images/facebook.png" alt=""></a>
+                                        </li>
+                                    </ul>
+                                    <div class="icon"> <i class="fa fa-plus" aria-hidden="true"></i> </div>
+                                </div>
+                                <div class="team-description">
+                                    <h3 class="text">About me</h3>
+                                    <p class="text">I am Fortune Ifeanyi. <br> complete it later!
+                                    </p>
+                                </div>
+                                <hr class="my-0"> 
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--footer start-->
+		<footer id="footer"  class="footer">
+			<div class="container">
+				<div class="footer-menu">
+		           	<div class="row">
+			           	<div class="col-sm-3">
+			           		 <div class="navbar-header">
+                                <div onclick="window.location = 'index.html#home'" class="navbar-header">
+                                    <h4 class="navbar-brand">TradeCrafts</h4>
+                                </div>
+				                <!-- <a class="navbar-brand" href="index.html">TradeCrafts</a> -->
+				            </div><!--/.navbar-header-->
+			           	</div>
+			           	<div class="col-sm-9">
+			           		<ul class="footer-menu-item">
+			                    <li class="scroll"><a href="about.html#about">about us</a></li>
+			                    <li class="scroll"><a href="skills-display.html">skills</a></li>
+			                    <li class="scroll"><a href="products.html">products</a></li>
+			                    <li class="scroll"><a href="index.html#reviews" onclick="window.location='';">reviews</a></li>
+			                    <li class="scroll"><a href="about.html#faqs">faqs</a></li>
+			                    <li class="scroll"><a href="index.html#contact">contact</a></li>
+			                    <li class=" scroll"><a href="login.html" onclick="window.location='login.html';">my account</a></li>
+			                </ul><!--/.nav -->
+			           	</div>
+		           </div>
+				</div>
+				<div class="hm-footer-copyright">
+					<div class="row">
+						<div class="col-sm-5">
+							<p>
+								&copy;copyright 2023. designed and developed by <a href="https://linkedin.com/fortune-ifeanyi/234556">fortune ifeanyi</a>
+							</p>
+						</div>
+						<div class="col-sm-7">
+							<div class="footer-social">
+								<!-- <span><i class="fa fa-phone"> +2349027155093</i></span> -->
+								<h5 class="mobile_no"><span class="num">+2349027155093</span></a>
+								<a href="https://web.facebook.com/profile.php?id=61551809647267"><i class="fa fa-facebook"></i></a>	
+								<a href="https://twitter.com/for_tune_ify"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.linkedin.com/in/fortune-ifeanyi-231a64275/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B%2Bhclyv%2BSRsamgIbABedgKA%3D%3D"><i class="fa fa-linkedin"></i></a>
+								<a href="https://gmail.com"><i class="fa fa-google-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					
+				</div><!--footer-copyright-->
+			</div><!--container-->
+
+            <!--scroll-Top-->
+            <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
+        </footer><!--footer--> 
+    </div>
+
+    
+
+    <script>
+        /* function laod() {
+            setTimeout(function() {
+                var loadingPage = document.getElementById('loadingPage');
+                var content = document.getElementById('content');
+                loadingPage.style.display = 'block';
+                content.style.display = 'none';                  
+            }, 2000);
+            content.style.display = 'block';                  
+        } */        
+    </script>
+    <!-- <script src="assets/js/script.js"></script> -->
+    <script src="assets/js/about.js"></script>
+</body>
+</html>

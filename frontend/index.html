@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRADECRAFTS</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/favilogo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
+    <!--font-awesome.min.css Library-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+</head>
+<body class="main-layout" onload="displayCart();">
+    <!-- loader  -->
+    <!-- <div class="loader_bg">
+       <div class="loader"><img src="assets/images/loading.gif" alt="#" /></div>
+    </div> -->
+    <!-- <div id="loadingPage">
+        <img src="assets/images/loading.gif" alt="">
+    </div> -->
+
+    <div class="wholepage" id="content">
+        <nav class="navbar">
+            <div class="nav_link">
+                <div onclick="window.location = '#home'" class="nav_logo">
+                    <h4 class="logo">FortuneIfy</h4>
+                </div>
+                <div class="nav_links">
+                    <ul class="nav_links_list">
+                        <!-- <li class="dropdown" class="nav_links_list_item" onclick="window.location = '#home'">HOME
+                            <div class="dropdown-content">
+                                <a href="htmls/buyerUser.html">Dashboard</a>
+                                <a href="html/product.html">Our Products</a>
+                            </div>
+                        </li> -->
+                        <li class="dropdown" class="nav_links_list_item" id="nav_links_list_item">DASHBOARD
+                            <!-- <div class="dropdown-content">
+                                <a href="htmls/buyerUser.html">Dashboard</a>
+                                <a href="html/product.html">Our Products</a>
+                            </div> -->
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" id="nav_links_list_item1" onclick="color(1); window.location = '#about'">ABOUT
+                            <div class="dropdown-content">
+                                <a href="about.html">About Us</a>
+                                <a href="about.html#faqs">FAQs</a>
+                                <a href="about.html#team">Our Team</a>
+                            </div>
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" id="nav_links_list_item2" onclick="color(2); window.location = '#services'">SERVICES
+                            <div class="dropdown-content">
+                                <a href="skills-display.html">Skills</a>
+                                <a href="products.html">Products</a>
+                            </div>
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" id="nav_links_list_item3" onclick="color(3); window.location = '#traction'">OUR MISSION
+                            <div class="dropdown-content">
+                                <a href="#reviews">Reviews</a>
+                            </div>
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" id="nav_links_list_item4" onclick="color(4); window.location = '#contact'">CONTACT
+                            <div class="dropdown-content">
+                                <a href="#contact">Contact us</a>
+                                <a href="#newsletter">Newsletter</a>
+                            </div>
+                        </li>
+                        <!-- <li class="dropdown" class="nav_links_list_item" onclick="window.location = '#faqs'">FAQs
+                            <div class="dropdown-content">
+                                <a href="htmls/buyerUser.html">Dashboard</a>
+                                <a href="html/product.html">Our Products</a>
+                            </div>
+                        </li> -->
+                        <li href=" " class="cart_img" id="cart_img">
+                            <a onclick="gotoDaskboard()">
+                                <img src="assets/images/images/cart-blue.png" alt="cart basket">
+                            </a>
+                            <div class="cart_number">
+                                <p class="text" id="cart_number">0</p>
+                            </div>
+
+                             <!-- STARt OF CART DROPDOWN -->
+                             <div class="cart_basket hidden" onblur="" id="cart_basket">
+                                <div class="cart_title">
+                                    <h4 class="text" id="cart_number-title">Cart items (0)</h4>
+                                </div>
+                                <div class="cart_items" id="cart_items">
+                                    <h4 style="padding: 10px 0px; text-align: center;">Your cart basket is empty 😟😔🙁!</h4>
+                                </div>
+                                <div>
+                                    <div class="del">
+                                        <div class="redirect_btn">
+                                            <button class="text" onclick="gotoDaskboard();">See all Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END OF CART DROPDOWN -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden_big">
+                <pli href=" " class="cart_img" id="cart_img">
+                    <a>
+                        <img src="assets/images/images/cart-blue.png" alt="cart basket">
+                    </a>
+                    <div class="cart_number">
+                        <p class="text" id="cart_number">0</p>
+                    </div>
+
+                    <!-- STAR OF CART DROPDOWN -->
+                    <div class="cart_basket hidden" onblur="" id="cart_basket">
+                        <div class="cart_title">
+                            <h4 class="text" id="cart_number-title">Cart items (0)</h4>
+                        </div>
+                        <div class="cart_items" id="cart_items">
+                            <h4 style="padding: 10px 0px; text-align: center;">Your cart basket is empty 😟😔🙁!</h4>
+                        </div>
+                        <div>
+                            <div class="del">
+                                <div class="redirect_btn">
+                                    <button class="text" onclick="gotoDashboard();">See all Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END OF CART DROPDOWN -->
+
+                </pli>
+
+                <div class="navbar_slidein">
+                    <span id="menu-icon">&#9776;</span>
+                    <ul class="nav-options">
+                        <li class="dropdown text" class="nav_links_list_item" id="nav_slide_item" onclick="gotoDaskboard();">MY DASHBOARD</li>
+                        <li class="dropdown text" class="nav_links_list_item" id="nav_links_list_item1" onclick="color(1); window.location = '#about'">ABOUT</li>
+                        <li class="dropdown text" class="nav_links_list_item" id="nav_links_list_item2" onclick="color(2); window.location = 'skills-display.html'">SKILLS</li>
+                        <li class="dropdown text" class="nav_links_list_item" id="nav_links_list_item2" onclick="color(2); window.location = 'products.html'">PRODUCTS</li>
+                        <li class="dropdown text" class="nav_links_list_item" id="nav_links_list_item3" onclick="color(3); window.location = '#traction'">OUR MISSION</li>
+                        <li class="dropdown text" class="nav_links_list_item" id="nav_links_list_item4" onclick="color(4); window.location = '#contact'">CONTACT</li>
+                        <li class="dropdown text" class="nav_links_list_item" id="nav_action" onclick="logout();">LOGOUT</li>
+                    </ul>
+                </div>
+
+                <div class="hamburger">
+                    <img src="assets/images/images/hamburger-bg.png" alt="">
+                </div>
+            </div>
+            <div class="nav_btns" id="nav_btns">
+                <div class="search_login_reg_btn">
+                    <div class="login_reg_btn">
+                        <input onclick="window.location = 'login.html'" class="nav_login_btn" type="submit" value="Log in">
+                        <input onclick="window.location = 'register.html'" class="nav_register_btn" type="submit" value="Get Started">
+                    </div>
+                </div>
+            </div>
+            <div class="hello_msg" id="hello_msg">
+                <div class="search_login_reg_btn">
+                    <div class="logged_msg">
+                      <div class="userMessage">
+                          <p>Hello <br> <span id="username">fortune</span></p>
+                      </div>
+                      <div>
+                          <input id="logout" class="nav_logout_btn" type="submit" onclick="logout();" value="Logout">
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger" onclick="hambugger();">
+                <img src="assets/images/images/hamburger-bg.png" alt="">
+            </div>
+        </nav>
+        <!-- <div class="hamburger" id="hamburger">
+            <img src="assets/images/images/hamburger-bg.png" alt="">
+        </div> -->
+
+        <!-- <div class="christmas_ornaments">
+            <div class="christmas_cap">
+                <img src="assets/images/christmas/cap0.png" alt="">
+            </div>
+            <div class="santa">
+                <img src="https://res.cloudinary.com/fortuneify/image/upload/v1703903994/tradecrafts/display-imgs/santa3_jmwfhl.png" alt="">
+            </div>
+        </div> -->
+
+        <section class="hero_section" id="home">
+            <div class="hero_container">
+                <div class="hero_text-search">
+                    
+                    <div class="hero_text">
+                        <h1>Welcome to FortuneIfy DBMS</h1>
+                        <p>Customers Application to manage your customers details</p>
+                    </div>
+                    <div class="search_btn">
+                        <input type="submit" value="Get Started" onclick="gotoDaskboard();">
+                    </div>
+                    <!-- <form onsubmit="event.preventDefault(); searchSkills();">
+                        <div class="hero_search">
+                            <div class="search_input">
+                                <input type="search" name="search" id="search" placeholder="What skill do you want to learn?" maxlength="20">
+                            </div>
+                            <div class="search_btn">
+                                <input type="submit" value="Search" onclick="searchSkills();">
+                            </div>
+                        </div>
+                    </form> --> 
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <!-- <section class="contact_section" id="contact">
+            <div class="contact_container">
+                <div class="contact_me">
+                    <div class="contact_me_header">
+                        <h3>Contact Me</h3>
+                        <p>We are Available on this line. You can also visit our physical branch.</p>
+                    </div>
+                    <div class="contact_details">
+                        <div class="each_detail">
+                            <div class="detail_icon">
+                                <img src="assets/images/images/phone-calling.png" alt="">
+                            </div>
+                            <div class="detail_text">
+                                <p>Phone</p>
+                                <h5>(+234)9027155093</h5>
+                            </div>
+                        </div>
+                        <div class="each_detail">
+                            <div class="detail_icon">
+                                <img src="assets/images/images/emailwhite.png" alt="">
+                            </div>
+                            <div class="detail_text">
+                                <p>Email</p>
+                                <h5>fortuneify23@gmail.com</h5>
+                            </div>
+                        </div>
+                        <div class="each_detail">
+                            <div class="detail_icon">
+                                <img src="assets/images/images/address.png" alt="">
+                            </div>
+                            <div class="detail_text">
+                                <p>Address</p>
+                                <h5>Sabo Kaduna, Nigeria</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="get_in_touch">
+                    <form id="contact-form" action="https://getform.io/f/ee20b9ea-a2af-490c-a4b9-0b5b47087782" method="POST">
+                        <div class="get_in_touch_header">
+                            <h3>GET IN TOUCH</h3>
+                        </div>
+                        <div class="contact_input_fields">
+                            <div class="contact_fields">
+                                <input type="text" name="fullname" placeholder="Full Name">
+                                <input type="text" name="email" placeholder="Email Address">
+                                <input type="number" name="phone" placeholder="Phone">
+                                <input type="text" name="title" placeholder="Title">
+                            </div>
+                            <textarea name="message" id="" cols="30" rows="10" placeholder="Write Message..."></textarea>
+                            <div class="contact_btn">
+                                <button type="submit">
+                                    <h4>Submit Now</h4> 
+                                    <div class="cont_arrow">
+                                        <img class="contact_arrow" src="assets/images/icon/white-forward-arrow.png" alt="">
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section> -->
+
+        
+
+        <!--footer start-->
+		<footer id="footer"  class="footer">
+			<div class="container">
+				<div class="footer-menu">
+		           	<div class="row">
+			           	<div class="col-sm-3">
+			           		 <div class="navbar-header">
+                                <div onclick="window.location = '#home'" class="navbar-header">
+                                    <h4 class="navbar-brand">FortuneIfy</h4>
+                                </div>
+				                <!-- <a class="navbar-brand" href="index.html">TradeCrafts</a> -->
+				            </div><!--/.navbar-header-->
+			           	</div>
+			           	<div class="col-sm-9">
+			           		<ul class="footer-menu-item">
+			                    <li class="scroll"><a href="about.html">about us</a></li>
+                                <li class="scroll"><a href="skills-display.html">skills</a></li>
+                                <li class="scroll"><a href="products.html">products</a></li>
+			                    <li class="scroll"><a href="index.html#reviews" onclick="window.location='';">reviews</a></li>
+			                    <li class="scroll"><a href="about.html#faqs">faqs</a></li>
+			                    <li class="scroll"><a href="index.html#contact">contact</a></li>
+			                    <li class=" scroll"><a href="login.html" onclick="window.location='login.html';">my account</a></li>
+			                </ul><!--/.nav -->
+			           	</div>
+		           </div>
+				</div>
+				<div class="hm-footer-copyright">
+					<div class="row">
+						<div class="col-sm-5">
+							<p>
+								&copy;copyright 2023. designed and developed by <a href="https://linkedin.com/fortune-ifeanyi/234556">fortune ifeanyi</a>
+							</p>
+						</div>
+						<div class="col-sm-7">
+							<div class="footer-social">
+								<!-- <span><i class="fa fa-phone"> +2349027155093</i></span> -->
+								<h5 class="mobile_no"><span class="num">+2349027155093</span></a></h5>
+								<a href="https://web.facebook.com/profile.php?id=61551809647267"><i class="fa fa-facebook"></i></a>	
+								<a href="https://twitter.com/for_tune_ify"><i class="fa fa-twitter"></i></a>
+								<a href="https://www.linkedin.com/in/fortune-ifeanyi-231a64275/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B%2Bhclyv%2BSRsamgIbABedgKA%3D%3D"><i class="fa fa-linkedin"></i></a>
+								<a href="https://gmail.com"><i class="fa fa-google-plus"></i></a>
+							</div>
+						</div>
+					</div>
+					
+				</div><!--footer-copyright-->
+			</div><!--container-->
+
+            <!--scroll-Top-->
+            <!-- <a href="#" id="back-to-top" title="Back to top">&uarr;</a> -->
+        </footer><!--footer--> 
+    </div>
+
+    
+
+    <script>
+        /* function laod() {
+            setTimeout(function() {
+                var loadingPage = document.getElementById('loadingPage');
+                var content = document.getElementById('content');
+                loadingPage.style.display = 'block';
+                content.style.display = 'none';                  
+            }, 2000);
+            content.style.display = 'block';                  
+        } */
+
+        const menu = document.getElementById("menu-icon");
+        document.getElementById("menu-icon").addEventListener("click", function() {
+            document.querySelector(".nav-options").classList.toggle("show");
+            // window.addEventListener('click', function(event) {
+                // console.log(event.target);
+                // if (event.target == document.querySelector(".nav-options")) {
+                   //document.getElementById("overlay").style.display = 'none'
+                   //  document.querySelector(".nav-options").classList.toggle("show");
+                // }
+            // })
+        });
+    </script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

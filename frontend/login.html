@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeCrafts LoginPage</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/favilogo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/login.css">
+    <!--font-awesome.min.css Library-->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <script>
+        const token = localStorage.getItem("token");
+        const username = localStorage.getItem("username");
+        const savedPassword = localStorage.getItem("password");
+        const user_role = localStorage.getItem("user_role");
+        if(token) {
+            if (user_role == 'entrepreneur') {
+                window.location = "entrepreneurs.html";
+            } else if(user_role == 'learner') {
+                window.location = "learners.html";
+            } 
+            else if(user_role == 'administrator') {
+                window.location = "admin.html";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="wholepage" id="content">
+        <nav class="navbar">
+            <div class="nav_link">
+                <div onclick="window.location = 'index.html'" class="nav_logo">
+                    <h4>FortuneIfy</h4>
+                </div>
+                <div class="nav_links">
+                    <ul class="nav_links_list">
+                        <li class="dropdown" class="nav_links_list_item" onclick="window.location = 'index.html#traction'">OUR MISSION
+                            <!-- <div class="dropdown-content">
+                                <a href="htmls/buyerUser.html">Dashboard</a>
+                                <a href="html/product.html">Our Products</a>
+                            </div> -->
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" onclick="window.location = 'index.html#about'">ABOUT
+                            <div class="dropdown-content">
+                                <a href="index.html#about">About Us</a>
+                                <a href="index.html#reviews">Reviews</a>
+                                <a href="index.html#team">Our Team</a>
+                            </div>
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" onclick="window.location = 'index.html#faqs'">FAQs
+                            <!-- <div class="dropdown-content">
+                                <a href="htmls/buyerUser.html">Dashboard</a>
+                                <a href="html/product.html">Our Products</a>
+                            </div> -->
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" onclick="window.location = 'index.html#services'">SERVICES
+                            <!-- <div class="dropdown-content">
+                                <a href="htmls/buyerUser.html">Dashboard</a>
+                                <a href="html/product.html">Our Products</a>
+                            </div> -->
+                        </li>
+                        <li class="dropdown" class="nav_links_list_item" onclick="window.location = 'index.html#contact'">CONTACT
+                            <!-- <div class="dropdown-content">
+                                <a href="htmls/buyerUser.html">Dashboard</a>
+                                <a href="html/product.html">Our Products</a>
+                            </div> -->
+                        </li>
+                        <li href=" " class="cart_img"><a href=""><img src="assets/images/images/cart-blue.png" alt="cart basket"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav_btns">
+                <div class="search_login_reg_btn">
+                    <!-- <div class="search_btn_container">
+                        <input type="search" class="search_btn" placeholder="Search products">
+                        <a href=""><img class="search_icon" src="assets/images/icons/search3.png" alt="searh icon"></a>
+                    </div> -->
+                    <div class="login_reg_btn">
+                        <input onclick="window.location = 'login.html'" class="nav_login_btn" type="submit" value="Log in">
+                        <input onclick="window.location = 'register.html'" class="nav_register_btn" type="submit" value="Get Started">
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="login_section">
+            <div class="login_container">
+                <div class="user_input_field">
+                    <form id="login-form">
+                        <div class="top_container"><h4>Welcome Back</h4></div>
+                        <h3>USER <br> LOGIN</h3>
+                        <p id="pageerror" class="pageerror"></p>
+                        <div class="login_fields">
+                            <div class="input_fields">
+                                <div class="container">
+                                    <img src="assets/images/images/emailwhite.png" alt="">
+                                </div>
+                                <input id="email" type="text" placeholder="Email">
+                            </div>
+                            <div class="input_fields">
+                                <div class="container">
+                                    <img src="assets/images/images/passwordwhite.png" alt="">
+                                </div>
+                                <input id="password" type="password" placeholder="Password">
+                            </div>
+                            <div class="forget_password">
+                                <input type="checkbox" id="remember-password">
+                                <p class="remember">Remember</p> 
+                                <p class="forget_pass">Forget Password?</p>
+                            </div>
+                            <div class="submit_btn">
+                                <input type="submit" value="LOGIN" onclick="submitLoginForm();" id="login-btn">
+                            </div>
+                            <div class="create_account">
+                                <p><a href="register.html">Create Account</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+
+</body>
+</html>

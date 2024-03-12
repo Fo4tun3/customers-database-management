@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeCraft Learner</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/favilogo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/user.css">
+    <link rel="stylesheet" href="assets/css/learners-responsive.css">
+
+    <!-- <script>
+        const token = localStorage.getItem("token");
+        if(!token) {
+            window.location = "login.html"
+        }
+    </script> -->
+
+</head>
+<body class="main-layout" onload="displayCustomers();">
+    <!-- loader  -->
+    <!-- <div class="loader_bg">
+       <div class="loader"><img src="assets/images/loading.gif" alt="#" /></div>
+    </div> -->
+    <!-- <div id="loadingPage">
+        <img src="assets/images/loading.gif" >
+    </div> -->
+
+    <div class="wholepage" id="content">
+      
+    <section class="dashboard_section">
+        <div class="dashboard_container">
+            <div class="dashboard_navs">
+                <div>
+                    <div onclick="window.location = 'index.html'" class="nav_logo">
+                        <h4>FortuneIfy</h4>
+                    </div>
+                </div>
+                <div class="links_details">
+                    <div class="links_profile_pic">
+                        <img src="assets/images/icon/avatar.jpg"  id="profile_img">
+                    </div>
+                    <div class="links_user_info">
+                        <!-- <p class="text white" id="fullname">Fortune Ifeanyi</p> -->
+                        <!-- <p class="text white" id="fullname"></p> -->
+                        <p id="user-email" class="text white">fortune@gmail.com</p>
+                        <h4 class="text white">Admin</h4>
+                    </div>
+                    <!-- <div class="acct_activation_status_container">
+                        <div class="acct_activation_status">
+                            <div class="activation_status_img"><img src="assets/images/icon/tick-circle.png" ></div>
+                            <div class="activation_status_text"><p class="text white">Accout Verified</p></div>
+                        </div>
+                    </div> -->
+                </div>
+                <div>
+                    <div class="">
+                        <div class="dashboard_navs_links_container">
+                            <div id="" class="dashboard_navs_links" >
+                                <div id="" class="dashboard_navs_links_list">
+                                    <div id="navlink1" class="dashboard_nav_links_img_text log first">
+                                        <img class="dashboard_navs_links_img" src="assets/images/icon/dashboard1.png" >
+                                        <h4 id="text1" class="dashboard_navs_links_item text white" onclick="toggleContent(1)">All Customers</h4>
+                                    </div>
+                                    <div id="navlink2" class="dashboard_nav_links_img_text log ">
+                                        <img class="dashboard_navs_links_img" src="assets/images/icon/users2.png" >
+                                        <h4 id="text2"  class="dashboard_navs_links_item text white" onclick="toggleContent(2)">Add Customers</h4>
+                                    </div>
+                                    <div id="navlink3" class="dashboard_nav_links_img_text log">
+                                        <img class="dashboard_navs_links_img" src="assets/images/icon/orders.png" >
+                                        <h4 id="text3"  class="dashboard_navs_links_item text white" onclick="toggleContent(3)">Update Customer</h4>
+                                    </div>
+                                    <div id="navlink4" class="dashboard_nav_links_img_text log">
+                                        <img class="dashboard_navs_links_img" src="assets/images/icon/products.png" >
+                                        <h4 id="text4"  class="dashboard_navs_links_item text white" onclick="toggleContent(4)">Delete Customer</h4>
+                                    </div>
+                                    <div class="dashboard_nav_links_img_text log">
+                                        <img class="dashboard_navs_links_img" src="assets/images/icon/logout1.png" >
+                                        <h4 id="logout_link" class="dashboard_navs_links_item text white" onclick="logout();">Log Out</h4>
+                                    </div>
+                                </div>
+                                <div id="delete_account" class="dashboard_nav_links_img_text log" >
+                                    <img class="dashboard_navs_links_img" src="assets/images/icons/delete2.png" >
+                                    <h4 class="del_account text white" onclick="deleteaccount();" >Delete Account</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard_content">
+                <div class="dashboard_header">
+                    <!-- <div class="dashboard_greetings">
+                        <h1 id="greeting" class="greeting_style"></h1>
+                    </div> -->
+                    <div class="userMessage">
+                        <!-- <div class="emoji">👋🎄</div> -->
+                        <p class="text helloname">Hello👋 <span class="edutas" id="username">fortune</span></p>
+                        <div onclick="window.location = 'index.html'" class="header_logo">
+                            <h4>FortuneIfy</h4>
+                        </div>                    
+                    </div>
+                    <div class="cart_logout">
+                        <div class="cart_img">
+                            <a onclick="toggleContent(3);" id="text3"><img src="assets/images/images/cart-blue.png" alt="cart basket"></a><div class="cart_number"><p id="cart_number">0</p></div>
+                            <span class="none" id="menu-icon">&#9776;</span>
+                        </div>
+                        <div class="notification" id="">
+                            <img src="assets/images/icon/notification.png" >
+                        </div>
+                        <div class="logout">
+                            <input id="logout" class="nav_logout_btn" type="submit" onclick="logout();" value="Logout">
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard_content_container">
+                    <!-- <div class="dashboard_greetings">
+                        <h1 id="greeting" class="greeting_style"></h1>
+                    </div> -->
+                    
+
+                    <div id="content1" class="dashboard_analytics_container">
+                        <div class="content_heading">
+                            <h2 class="text">All Customers</h2>
+                        </div>
+                            <div class="dashboardcontainer">
+                                    <div class="dashboard-container">
+                                        <div class="admins">
+                                            <div class="header_title">   
+                                                <h4 class="text">See All Customers Information <span id="customers_total">(0)</span></h4>
+                                                <div class="adm_search_container" id="">
+                                                    <div class="search_icon" id="">
+                                                        <img src="assets/images/images/search2.png" alt="">
+                                                    </div>
+                                                    <input type="search" name="" id="anysearch" placeholder="Search a Customer" oninput="searchCustomer()">
+                                                </div>
+                                                <!-- <div>
+                                                    <select name="categories" id="categories">
+                                                        <option value="" class="text">Select </option>
+                                                        <option value="country" class="text">Country </option>
+                                                        <option value="gender" class="text">Gender </option>
+                                                    </select>
+                                                </div> -->
+                                            </div>
+                        
+                                            <div class="admin_titles">
+                                                <div class="title serial_no"><p class="bold">ID</p></div>
+                                                <div class="title"><p class="bold">Name</p></div>
+                                                <div class="title nonebig"><p class="bold">Email</p></div>
+                                                <div class="title nonebig"><p class="bold">Contact</p></div>
+                                                <!-- <div class="title nonebig"><p class="bold">City</p></div> -->
+                                                <div class="title nonebig"><p class="bold">Country</p></div>
+                                                <div class="title nonebig"><p class="bold">Gender</p></div>
+                                                <div class="title center"><p class="bold">Action</p></div>
+                                            </div>
+                                            <div id="customers_display_div">
+                                                <div class="admin_person">
+                                                    <div class="adm-serial-no">
+                                                        <p class="writetext">1</p>
+                                                    </div>
+                                                    <div class="adm-img-name">
+                                                        <p class="writetext">Ifeanyi Fortune</p>
+                                                    </div>
+                                                    <div class="adm-img-name">
+                                                        <p class="writetext">fortune@gmail.com</p>
+                                                    </div>
+                                                    <div class="adm-location nonebig">
+                                                        <p class="writetext">09045678973</p>
+                                                    </div>
+                                                    <!-- <div class="adm-join-date nonebig">
+                                                        <p class="writetext">New York</p>
+                                                    </div> -->
+                                                    <div class="adm-status nonebig">
+                                                        <p class="writetext">USA</p>
+                                                    </div>
+                                                    <div class="adm-location nonebig">
+                                                        <p class="writetext">M</p>
+                                                    </div>
+                                                    <div class="adm-action">
+                                                        <div class="edit"><p class="writetext" onclick="toggleContent(3)">Edit</p></div>
+                                                        <div class="del"><p class="writetext" onclick="toggleContent(4)">Del</p></div>
+                                                    </div>
+                                                </div>
+                                                <div class="admin_person">
+                                                    <div class="adm-serial-no">
+                                                        <p class="writetext">2</p>
+                                                    </div>
+                                                    <div class="adm-img-name">
+                                                        <p class="writetext">Vincent Agwom</p>
+                                                    </div>
+                                                    <div class="adm-img-name">
+                                                        <p class="writetext">vincee@gmail.com</p>
+                                                    </div>
+                                                    <div class="adm-location nonebig">
+                                                        <p class="writetext">08067543212</p>
+                                                    </div>
+                                                    <!-- <div class="adm-join-date nonebig">
+                                                        <p class="writetext">Kaduna</p>
+                                                    </div> -->
+                                                    <div class="adm-status nonebig">
+                                                        <p class="writetext">Nigeria</p>
+                                                    </div>
+                                                    <div class="adm-location nonebig">
+                                                        <p class="writetext">M</p>
+                                                    </div>
+                                                    <div class="adm-action">
+                                                        <div class="edit"><p class="writetext" onclick="toggleContent(3)">Edit</p></div>
+                                                        <div class="del"><p class="writetext" onclick="toggleContent(4)">Del</p></div>
+                                                    </div>
+                                                </div>
+                                                <div class="admin_person">
+                                                    <div class="adm-serial-no">
+                                                        <p class="writetext">3</p>
+                                                    </div>
+                                                    <div class="adm-img-name">
+                                                        <p class="writetext">Victor Eze</p>
+                                                    </div>
+                                                    <div class="adm-img-name">
+                                                        <p class="writetext">victeze@gmail.com</p>
+                                                    </div>
+                                                    <div class="adm-location nonebig">
+                                                        <p class="writetext">07098675432</p>
+                                                    </div>
+                                                    <!-- <div class="adm-join-date nonebig">
+                                                        <p class="writetext">Toronto</p>
+                                                    </div> -->
+                                                    <div class="adm-status nonebig">
+                                                        <p class="writetext">Canada</p>
+                                                    </div>
+                                                    <div class="adm-location nonebig">
+                                                        <p class="writetext">M</p>
+                                                    </div>
+                                                    <div class="adm-action">
+                                                        <div class="edit"><p class="writetext" onclick="toggleContent(3)">Edit</p></div>
+                                                        <div class="del"><p class="writetext" onclick="toggleContent(4)">Del</p></div>
+                                                    </div>
+                                                </div>
+                                                <div class="admin_person">
+                                                    <div class="adm-serial-no">
+                                                        <p class="writetext">4</p>
+                                                    </div>
+                                                    <div class="adm-img-name">
+                                                        <p class="writetext">John Tighil</p>
+                                                    </div>
+                                                    <div class="adm-img-name">
+                                                        <p class="writetext">johntig@gmail.com</p>
+                                                    </div>
+                                                    <div class="adm-location nonebig">
+                                                        <p class="writetext">07098675432</p>
+                                                    </div>
+                                                    <!-- <div class="adm-join-date nonebig">
+                                                        <p class="writetext">Toronto</p>
+                                                    </div> -->
+                                                    <div class="adm-status nonebig">
+                                                        <p class="writetext">Canada</p>
+                                                    </div>
+                                                    <div class="adm-location nonebig">
+                                                        <p class="writetext">M</p>
+                                                    </div>
+                                                    <div class="adm-action">
+                                                        <div class="edit"><p class="writetext" onclick="toggleContent(3)">Edit</p></div>
+                                                        <div class="del"><p class="writetext" onclick="toggleContent(4)">Del</p></div>
+                                                    </div>
+                                                </div>
+                                                <div class="admin_person">
+                                                    <div class="adm-serial-no">
+                                                        <p class="writetext">5</p>
+                                                    </div>
+                                                    <div class="adm-img-name">
+                                                        <p class="writetext">Stella Oluwakemi</p>
+                                                    </div>
+                                                    <div class="adm-img-name">
+                                                        <p class="writetext">stellakemi@gmail.com</p>
+                                                    </div>
+                                                    <div class="adm-location nonebig">
+                                                        <p class="writetext">07098675432</p>
+                                                    </div>
+                                                    <div class="adm-join-date nonebig">
+                                                        <p class="writetext">Toronto</p>
+                                                    </div>
+                                                    <!-- <div class="adm-status nonebig">
+                                                        <p class="writetext">Canada</p>
+                                                    </div> -->
+                                                    <div class="adm-location nonebig">
+                                                        <p class="writetext">F</p>
+                                                    </div>
+                                                    <div class="adm-action">
+                                                        <div class="edit"><p class="writetext" onclick="toggleContent(3)">Edit</p></div>
+                                                        <div class="del"><p class="writetext" onclick="toggleContent(4)">Del</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+
+
+                    <div id="content2" class="addskill_container">
+                        <div class="content_heading">
+                            <h2 class="text">Add Customers</h2>
+                        </div>
+                        <form id="addProductForm">
+                            <div class="add-skill_container">
+                                <div class="skill_container">
+                                    <h4 class="text">Add New Customer</h4>
+                                    <div class="addskill_img_inputs">
+                                        <div class="addskill_img">
+                                            <!-- <div class="img_btn shiftfile">
+                                                <input type="file" name="avatar" id="file1" title="Choose a profile image" accept="image/*">
+                                                <div class="skill_img">
+                                                    <img id="selected-image1" src="assets/images/images/img7.jpeg" alt="">
+                                                </div>
+                                                <div id="add_btn" class="add_del_btns">
+                                                    <input id="upload" class="upload text" type="button" onclick="addimage();" value="Upload a picture">
+                                                </div>
+                                            </div> -->
+                                            <div class="skill_input_field text dir" for="oldPassword" class="text">Customer Name <br>
+                                                <input type="text" name="name" id="name" placeholder="Enter the customer name">
+                                            </div>
+                                            <div class="skill_input_field text dir" for="oldPassword" class="text">Gender <br>
+                                                <input type="text" name="gender" id="gender" placeholder="Enter the customer gender">
+                                            </div>
+                                            <div class="skill_input_field text dir" for="oldPassword" class="text">City <br>
+                                                <input type="text" name="city" id="city" placeholder="Enter the customer city">
+                                            </div>
+                                        </div>
+                                        <div class="addskill_inputs">
+                                            <div class="skill_input">
+                                                <div class="skill_input_field text dir longwidth" for="oldPassword" class="text">Email <br>
+                                                    <input type="text" name="email" id="email" placeholder="Enter the customer email">
+                                                </div>
+                                                <div class="skill_input_field text dir longwidth" for="oldPassword" class="text">Contact Number <br>
+                                                    <input type="text" name="contact" id="contact" placeholder="Enter the customer Mobile number">
+                                                </div>
+                                                <div class="skill_input_field text dir longwidth" for="oldPassword" class="text">Country <br>
+                                                    <input type="text" name="country" id="country" placeholder="Enter the customer country">
+                                                </div>
+                                                <!-- <div class="skill_textarea_field text dir" for="oldPassword" class="text">Description <br>
+                                                    <textarea class="text" name="description" id="description" cols="68" rows="10" placeholder="Write a description of the skill"></textarea>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="addskill_btn_container">
+                                        <div class="addskill_btn">
+                                            <!-- <input type="button" class="text" value="Add Customer" onclick="event.preventDefault(); submitAddCustomersForm(); toggleContent(1); window.location = 'user.html';"> -->
+                                            <input type="button" class="text" value="Add Customer" onclick="event.preventDefault(); submitAddCustomersForm(); toggleContent(1);">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+
+                    <div id="content3" class="addskill_container">
+                        <div class="content_heading">
+                            <h2 class="text">Update Customers</h2>
+                        </div>
+                        <form id="addProductForm">
+                            <div class="add-skill_container">
+                                <div class="skill_container">
+                                    <!-- <h4 class="text">Update a Customer Information</h4> -->
+                                    <div class="header_title-search">   
+                                        <h4 class="text">Update a Customer Information</h4>
+                                        <div class="adm_search_container" id="">
+                                            <div class="search_icon" id="">
+                                                <img src="assets/images/images/search2.png" alt="">
+                                            </div>
+                                            <input type="number" name="" id="update_search" placeholder="Find Customer to Update" oninput="findUpdateCustomer()">
+                                        </div>
+                                    </div>
+
+                                    <div class="addskill_img_inputs">
+                                        <div class="addskill_img">
+                                            <div class="skill_input_field text dir" for="oldPassword" class="text">Customer Name <br>
+                                                <input type="text" name="name" id="update_name" placeholder="Enter the customer name">
+                                            </div>
+                                            <div class="skill_input_field text dir" for="oldPassword" class="text">Gender <br>
+                                                <input type="text" name="gender" id="update_gender" placeholder="Enter the customer gender">
+                                            </div>
+                                            <div class="skill_input_field text dir" for="oldPassword" class="text">City <br>
+                                                <input type="text" name="city" id="update_city" placeholder="Enter the customer city">
+                                            </div>
+                                        </div>
+                                        <div class="addskill_inputs">
+                                            <div class="skill_input">
+                                                <div class="skill_input_field text dir longwidth" for="oldPassword" class="text">Email <br>
+                                                    <input type="text" name="period" id="update_email" placeholder="Enter the customer email">
+                                                </div>
+                                                <div class="skill_input_field text dir longwidth" for="oldPassword" class="text">Contact Number <br>
+                                                    <input type="text" name="period" id="update_contact" placeholder="Enter the customer Mobile number">
+                                                </div>
+                                                <div class="skill_input_field text dir longwidth" for="oldPassword" class="text">Country <br>
+                                                    <input type="text" name="period" id="update_country" placeholder="Enter the customer country">
+                                                </div>
+                                                <!-- <div class="skill_textarea_field text dir" for="oldPassword" class="text">Description <br>
+                                                    <textarea class="text" name="description" id="description" cols="68" rows="10" placeholder="Write a description of the skill"></textarea>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="addskill_btn_container">
+                                        <div class="addskill_btn">
+                                            <input type="button" class="text" value="Update Customer Info" onclick="event.preventDefault(); UpdateCustomerInfo(); toggleContent(1);">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    
+                    <div id="content4"  class="bookedskill_container">
+                        <div class="content_heading">
+                            <h2 class="text">Delete Customer</h2>
+                        </div>
+                            <div class="bookedSkills_management_container">
+                                <div class="booked_allSkills_container">
+                                    <!-- <h4 class="text">Update a Customer Information</h4> -->
+                                    <div class="header_title-search">   
+                                        <h4 class="text">Delete an existing customer</h4>
+                                        <div class="adm_search_container" id="">
+                                            <div class="search_icon" id="">
+                                                <img src="assets/images/images/search2.png" alt="">
+                                            </div>
+                                            <input type="number" name="" id="delete_search" placeholder="Find Customer to delete" oninput="findDelCustomer();">
+                                        </div>
+                                    </div>
+                                    <div class="booked_allSkills">
+                                        <!-- <h1 class="empty_style">No booked skill available😔</h1> -->
+                                        <div class="skill_input_field text dir " for="oldPassword" class="text">Customer Name <br>
+                                            <input type="text" disabled id="del_customerName" value="Fortune">
+                                        </div>
+                                        <div class="skill_input_field text dir " for="oldPassword" class="text">Email <br>
+                                            <input type="text" disabled id="del_customerEmail" value="fortune@gmail.com">
+                                        </div>
+                                    </div>
+                                    <div class="delete_customer_container">
+                                        <div class="confirm_msg">
+                                            <p class="text">Confirm the Name and Email of the customer you want to delete!</p>
+                                        </div>
+                                        <div class="delete_customer_btn">
+                                            <input type="button" class="text" value="Delete this Customer" onclick="event.preventDefault(); deleteMyProductPopUp();">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="overlay" id="overlay"></div>
+
+                   
+                    <!-- <div id="content5"> 
+                        id="content5" is useless
+                        <h1>Skills Display i will design you later. "REMEMBER ME". <br>I wont forget</h1>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </div>
+
+    <script>
+        const menu = document.getElementById("menu-icon");
+        menu.addEventListener("click", function() {
+            // document.getElementById("overlay").style.display = 'block'
+            document.querySelector(".dashboard_navs").classList.toggle("show");
+            
+            // window.addEventListener('click', function(event) {
+                // console.log(event.target);
+                // if (event.target !== menu) {
+                   // document.getElementById("overlay").style.display = 'none'
+                    // document.querySelector(".dashboard_navs").classList.toggle("show");
+                // }
+            // })
+        });
+    </script>
+
+    <script src="assets/js/admin.js"></script>
+    <script src="assets/js/js-requests/admin-req.js"></script>
+</body>
+</html>
+
